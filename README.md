@@ -1,2 +1,2 @@
 # University-woek
-Contains importsnt work for university 
+Contains important work for university 
