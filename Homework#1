@@ -1,3 +1,5 @@
+// VGTU #2.cpp : This file contains the 'main' function. Program execution begins and ends there.
+//
 #include <cmath>
 #include <iomanip>
 #include <iostream>
@@ -6,33 +8,34 @@ using namespace std;
 int main()
 {
     double  D;
-    double a, b, c,x1,x2;
+    double a, b, c;
     cin >> a >> b >> c;
-   
+
     D = (b * b) - 4 * a * c;
-    
-    if(D<0)
+
+    if (D < 0)
     {
         cout << "NO";
-     
+
     }
-   
-    else if (D==0)
-   {
-       x1 = (-b)/(2*a);
-cout << x1;
-   }
-   else {
-       x1 = ( - b + sqrt(D)) / (2 * a);
-       x2 = ( - b - sqrt(D)) / (2 * a);
-      
-   }
-    if(x1>x2)
+
+    else if (D == 0)
     {
-        cout << x2 << "_" << x1;
+        double x = (-b) / (2 * a);
+        cout << x;
     }
-    else
-    {
-        cout << x1 << "_" << x2;
+    else {
+        double  x1 = (-b + sqrt(D)) / (2 * a);
+        double x2 = (-b - sqrt(D)) / (2 * a);
+
+
+        if (x1 > x2)
+        {
+            cout << x2 << "_" << x1;
+        }
+        else
+        {
+            cout << x1 << "_" << x2;
+        }
     }
 }
